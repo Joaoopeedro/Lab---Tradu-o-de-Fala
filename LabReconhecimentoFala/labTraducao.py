@@ -14,6 +14,8 @@ def main():
         load_dotenv()
         ai_key = os.getenv("KEY")
         ai_region = os.getenv("REGIAO")
+
+        
         
         # Configurar tradução
         translation_config = speech_sdk.translation.SpeechTranslationConfig(ai_key, ai_region)
