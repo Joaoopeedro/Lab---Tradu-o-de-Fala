@@ -15,6 +15,9 @@ def main():
         ai_key = os.getenv("KEY")
         ai_region = os.getenv("REGIAO")
 
+
+
+
         
         
         # Configurar tradução
