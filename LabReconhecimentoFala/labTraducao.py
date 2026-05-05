@@ -3,7 +3,7 @@ import os
 
 # Importar namespaces
 import azure.cognitiveservices.speech as speech_sdk
-
+from dotenv import load_dotenv
 
 def main():
     try:
@@ -11,8 +11,9 @@ def main():
         global translation_config
 
         # Obter configurações
-        ai_key = ""
-        ai_region = ""
+        load_dotenv()
+        ai_key = os.getenv("KEY")
+        ai_region = os.getenv("REGIAO")
         
         # Configurar tradução
         translation_config = speech_sdk.translation.SpeechTranslationConfig(ai_key, ai_region)

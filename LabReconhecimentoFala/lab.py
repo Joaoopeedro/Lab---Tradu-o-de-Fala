@@ -3,13 +3,14 @@ import os
 
 # Importar namespaces
 import azure.cognitiveservices.speech as speech_sdk
-
+from dotenv import load_dotenv
 
 def main():
     try:
         global speech_config
 
         # Obter configurações
+        load_dotenv()
         ai_key = ""
         ai_region = ""
 
